@@ -1,88 +1,105 @@
-# bitrix24-tableau-wdc
-Tableau web data connector for bitrix24 API
+<div align="center">
 
-## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Screenshots](#screenshots)
-* [Setup](#setup)
-* [Usage](#usage)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
-<!-- * [License](#license) -->
+<h1>Bitrix24 Tableau WDC </h1>
 
+**Owner:** Zhukov Max
 
-## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
+**Contacts:** [Maxim.Zhukov@softline.com](Maxim.Zhukov@softline.com)
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+</div>
 
+> Это репозиторий кастомного коннектора данных Microsoft Power BI Custom Data Connector, разработанного [max-zorn](https://github.com/max-zorn).<br>
+> Коннекторы данных создаются с использованием языка M.<br> Пожалуйста, смотрите предварительно справочные материалы [Power Query Connector Developer Reference](https://docs.microsoft.com/en-us/power-query).<br> Используйте и модифицируйте  код из  [telematics-pbi-connector/code](https://github.com/novemdata/telematics-pbi-connector/tree/main/code) под собственные нужды с помощью [official manual](https://github.com/microsoft/DataConnectors#quickstart).
 
-## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
+## 📖 Описание
 
+Этот настраиваемый коннектор данных  `Tableau web data connector for bitrix24 API` позволяет получать и визуализировать данные из CRM `Bitrix24`:
 
-## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
-
-
-## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
-
-
-## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-
-Proceed to describe how to install / setup one's local environment / get started with the project.
-
-
-## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
-
-`write-your-code-here`
-
-
-## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+- ID
+- TITLE
+- TYPE_ID
+- STAGE_ID
+- CURRENCY_ID
+- OPPORTUNITY
+- IS_MANUAL_OPPORTUNITY
+- TAX_VALUE
+- LEAD_ID
+- COMPANY_ID
+- CONTACT_ID
+- BEGINDATE
+- CLOSEDATE
+- ASSIGNED_BY_ID
+- CREATED_BY_ID
+- MODIFY_BY_ID
+- DATE_CREATE
+- DATE_MODIFY
+- OPENED
+- CLOSED
+- COMMENTS
+- ADDITIONAL_INFO
+- LOCATION_ID
+- CATEGORY_ID
+- STAGE_SEMANTIC_ID
+- IS_NEW
+- IS_RECURRING
+- IS_RETURN_CUSTOMER
+- IS_REPEATED_APPROACH
+- Platform_Company_ID
+- Platform_Company_Contract_List
+- Billing_Is_Month
+- Platform_Type
+- refresh_date
 
 
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
+## 🎯 Ожидает реализации
+- [ ] первое
+- [ ] второе
+- [ ] третье
 
-To do:
-- Feature to be added 1
-- Feature to be added 2
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
+## 🔗 Ссылки
++ [Confluence]()
++ [Production]()
 
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
+## ☁️ Развертывание функции
 
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Шаг 1: Получите ключ и домен для вашей учетной записи API.
 
+Шаг 2: Скачайте файл `TelematicsAPI.mez` из репозитория [telematics-pbi-connector/build](https://github.com/novemdata/telematics-pbi-connector/tree/main/build).
 
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
+Шаг 3: Скопируйте этот файл в папку `C:\Users\<Your_User_Name>\Documents\Microsoft Power BI Desktop\Custom Connectors`.
 
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+>Если папка не существует, то создайте ее.
+
+Шаг 4: Откройте `Power BI Desktop`, и установите `"(Not recommended) Allow any..."` в разделе `Options/Data Extensions`.
+
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/40857648/116013033-9ac55300-a636-11eb-9ee5-36c9fcffb99d.png" >
+
+Шаг 5: Перезагрузите `Power BI Desktop` и перейдите в раздел `"Get Data"`.
+
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/40857648/116012985-55a12100-a636-11eb-941f-0d7153e0daf6.png">
+
+Шаг 6: Найдите онлайн сервис `"TelematicsAPI (Beta)` и выберите его.
+
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/40857648/116013190-7cac2280-a637-11eb-938c-7356873abb14.png">
+
+Шаг 7: Введите URL Вашего API аккаунта.
+
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/40857648/116013284-0e1b9480-a638-11eb-8610-9f49b2303871.png">
+
+Шаг 8: Введите `API key` от Вашего аккаунта.
+
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/40857648/116013324-4cb14f00-a638-11eb-9e4d-c559fbadf8a7.png">
+
+Шаг 9: Теперь вы можете выбирать объекты из своей учетной записи и либо сразу загружать данные, либо сначала преобразовывать их.
+
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/40857648/116013402-afa2e600-a638-11eb-9fea-310b4c0623cd.png">
+
+## 💻 Использование
